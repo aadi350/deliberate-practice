@@ -1,50 +1,64 @@
-# Imbalanced Data
-## Discrete Classification
-### Issues with Vanilla Accuracy
-- High imbalances in classes may mask poor classification performance in high metrics  
- *e.g. a classifier that always assigns the majority class to a new instance will achieve 99% accuracy where the majority class is 99% prevalent*
-- Accuracy assumes errors are equally cost, imbalanced classification: misclassifying instances of minority class are generally much costlier
-- Accuracy assumes class proportion is statis
+# Deliberate Practice
+*The foundations of this constitute a 3-month plan in preparation for interviews, and follow Jeff-Li's structure and four main areas of what an ideal data scientist should be able to do*  
+## Technical 
+> Is able to apply advanced techniques/concepts to multiple problems whilst writing elegant re-producable code, including their own packages
 
-### Cohen's Kappa
-$$
-Acc_e = \frac{\bold{E}(TP)+\bold{E}(TN)}{N}
-$$
-where $\bold{E}$ is expectation:
-$$
-\bold{E}(TP) = \frac{POS\times P(POS)}{N}
-$$
-$$
-\bold{E}(TN) = \frac{NEG\times P(NEG)}{N}
-$$
+## Independent 
+> Is paired with a Junior DS to mentor, with strong knowledge of multiple areas and captures synergies between the business
 
-Values less than zero indicate that performance of classifier is lower than random guessing
-$$
-\kappa = \frac{Acc_0-Acc_e}{1-Acc_e}
-$$
+## Problem Formulation
+> Develops the project roadmap to hit goals set by executive teams
 
-### Weighted Loss Function
-Since misclassifying the minority class may be significantly costlier than misclassifying the majority, we can apply selective weights to the loss function by weighting each outcome as follows:
-$$
-L = \frac{w_{+|+}TP + w_{+|-}FP + w_{-|+}FN + w_{-|-}TN}{N}
-$$
+## Influence 
+> Partners with Project Managers on areas of expertise, is able to work to contribute to the project roadmap
 
-#### Balanced Class Distribution
-Setting misclassification costs to the inverse of class proportions, i.e. $w_{+|-} = N/NEG$ and $w_{-|+} = N/POS$ 
+# Current Assessment 
+In order to move forward, I need to perform gap analysis on my current skills, moving forward quickly and iterating on each of the above four. I will find my weakest areas, which will allow me to develop a plan that fills these gaps 
 
-### F-Measure 
-$$
-F_\beta = (1+\beta^2)\frac{\text{precision}\times\text{recall}}{\beta^2\text{precision} + \text{recall}}
-$$
+Each area has points with areas for improvement, and "drills" designed to improve the given area.
 
-## Continuous Output
-By using a set threshold, we cannot differentiate more/less likely predictions in a given class
+### Technical Skills
+| Area for Improvement | Drill |
+| --- | --- | 
+| My code is slow, especially for parameter optimization | | 
 
-### ROC Curve
-> TPR vs FPR 
-For each possible threshold value, a point in the ROC curve is plotted based on the TPR and FPR for that threshold
+### Influence
+| Area for Improvement | Drill |
+| --- | --- |
+| I have no clue about my current field | Read/make notes about credit risk modeling 1h every day |
 
-### PR Graph
-> Precision vs Recall
-Focuses ONLY on the positive class  
-Good classifiers have optimal trade-off in terms of precision and recall, and should be to the top right side
+### Problem Formulation
+| Area for Improvement | Drill |
+| --- | --- |
+| | |
+
+### Independence
+| Area for Improvement | Drill |
+| --- | --- |
+| I don't know how to correspond to flesh out information from business partners | |
+
+
+## Framework
+*Focus, Feedback, Fix it*
+1. Set a specific goal with a constrained time-limit
+2. Define a clear metric to measure improvement
+3. Modify efforts in response to feedback
+4. Build and modify mental representations
+
+## Questions for more deliberate practice
+1. Do I understand the fundamentals?
+2. Am I working on the next step?
+3. What am I missing?
+
+## Sample Plan
+1. Find a data scientist/company that I respect
+2. Break their analysis process up into pieces that I want to improve (e.g. if I want to work on problem formulation, take note of the processes used to extract a well-worded problem used by the company)
+3. Identify pieces of my analysis that are less strong, and create exercises to improve these elements
+4. Iterate
+   
+## Topics Planning 
+| Topic | Time | Metric to Measure | 
+| --- | --- | --- |
+| Imbalanced Data Classification | 2 Weeks | *TBD* |
+
+<hr style="border: 1px solid #8338ec; background-color: #8338ec;">
