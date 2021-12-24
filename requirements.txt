@@ -1,0 +1,9 @@
+numpy
+pandas
+matplotlib
+plotly
+bokeh
+sklearn
+imblearn
+statsmodels
+https://github.com/pandas-profiling/pandas-profiling/archive/master.zip
